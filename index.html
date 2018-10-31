@@ -70,7 +70,10 @@
         function fibonacci(x) {
             let a = 0, b = 1, fin = 0;
             x -= 1 
-            if (x==0) {
+            
+            if (x==-1) {
+                fin = "input value must be great than 0" 
+            } else if (x==0) {
                 fin = 0 
             } else if(x==1) {
                 fin = 1
@@ -84,6 +87,7 @@
             return fin
         }
         console.log("fibonacci(8) = " + fibonacci(8))
+        console.log(fibonacci(0),fibonacci(1),fibonacci(2),fibonacci(3))
     </script>
 </body>
 </html>
