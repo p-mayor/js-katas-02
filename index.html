@@ -50,8 +50,8 @@
         }
         console.log("factorial(4) = " + factorial(4))
 
-        // Fibonacci
-        function fibonacci(x) {
+        // Fibonacci w array
+        function fibonacci_arr(x) {
             let fib_arr = [0,1]
             if (x==0) {
                 return 0
@@ -65,7 +65,25 @@
             }
             return fib_arr[x-1]
         }
-        console.log("fibonacci(8) = " + fibonacci(8))
+
+        // Fibonacci w/o array
+        function fibonacci(x) {
+            let a = 0, b = 1;
+            fin = 0
+            if (x==0) {
+                fin = 0 
+            } else if(x==1) {
+                fin = 1
+            } else {
+                for (i=2; i<=x; i++){
+                    fin = add(a,b)
+                    a = b
+                    b = fin
+                }
+            }
+            return fin
+        }
+        console.log("fibonacci(8) = " + fibonacci())
     </script>
 </body>
 </html>
